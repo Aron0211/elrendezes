@@ -66,3 +66,53 @@ img{
     border: 5px solid rgb(50,48,48);
     border-radius: 15px;
 }
+
+/* *-minden html elemre érvényes*/
+*{
+    box-sizing: border-box;
+}
+
+section {border: 2px solid red}
+
+main{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+/* át kell alakítani az oldalt mobil nézetre, tablet nézetre
+Reszponzív oldalt akarunk létre hozni*/
+
+@media screen and (max-width:700px){
+nav{
+    display: grid;
+    grid-template-columns: 1fr ;
+}
+    body{
+        background-color: brown;
+    }
+    main{
+        
+        grid-template-columns: 1fr 1fr;
+        
+    }
+}
+
+@media screen and (max-width:500px){
+    body{
+        background-color: aqua;
+    }
+        
+    main{
+        
+        grid-template-columns: 1fr;
+        
+    }
+}
+
+
+
+
+
+
+
